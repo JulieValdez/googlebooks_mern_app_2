@@ -1,18 +1,19 @@
-import React, { Component } from "react";
+import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import Nav from "./components/Nav/Nav";
-import "./App.css";
+import Books from "./pages/Books";
+// import Saved from "./pages/Saved";
 
-class App extends Component {
-  render() {
-    return (
+function App() {
+  return (
+    <>
       <Router>
-        <div className="App">
-          <Nav />
+        <div>
+          <Route exact path="/" component={Books} />
+          {/* <Route exact path="/saved" component={Saved} /> */}
         </div>
       </Router>
-    );
-  }
+    </>
+  );
 }
 
 export default App;
